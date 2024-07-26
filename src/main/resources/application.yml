@@ -1,0 +1,24 @@
+spring:
+    datasource:
+        driverClassName: org.postgresql.Driver
+        password: root123
+        url: jdbc:postgresql://localhost:5432/waterdeliverydb
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+#        properties:
+#            hibernate:
+#                format_sql: true
+#        show-sql: true
+    task:
+      execution:
+          pool:
+              max-size: 20
+              core-size: 8
+              queue-capacity: 100
+
+bot:
+    token: 7042628376:AAH98sm98hBefJp-K63Et35EtvUIU5HNbZs
+server:
+    port: 8081

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+<h1 class="bg-dark text-white text-center">Operator Page</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Phone</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.getUserPhone()}"></td>
+            <td th:text="${user.getCreatedAt()}"></td>
+            <td>
+                <a th:href="|/operator/userverify/${user.getId()}|" class="btn btn-dark text-white"> start </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
